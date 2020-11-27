@@ -1,0 +1,17 @@
+.btn{
+    
+      background-color: #03045e;
+      color: aliceblue;
+      border: none;
+      transition: background 0.2s;
+}
+
+.btn:hover{
+    background-color: #040786;
+    color: aliceblue;
+}
+
+.form-control{
+   border-radius: 10px;
+    
+}
