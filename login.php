@@ -5,7 +5,7 @@
         $_SESSION['userID'] = $_POST['userID'];
         $_SESSION['email'] = $_POST['email'];
         $_SESSION['picture'] = $_POST['picture'];
-        $_SESSION['name'] = $_POST['name'];
+        $_SESSION['first_name'] = $_POST['first_name'];
         $_SESSION['accessToken'] = $_POST['accessToken'];
 
         exit("success");
@@ -20,6 +20,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Facebook Login</title>  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -31,11 +32,18 @@
                     <input class="form-control" placeholder="Email..."><br>
                     <input class="form-control" placeholder="Senha..."><br>
                     <input class="btn" type="submit" value="Entar">
-                    <input class="btn" type="button" onclick="logIn()" value="Entar com Facebook">
+                    <button  type="button" onclick="logIn()" ><i class="fab fa-facebook fa-lg"></i> Entar com Facebook</button>
+                    
                 </form>
             </div>
         </div>
     </div>
+
+    
+
+    <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v9.0&appId=1791804077640492&autoLogAppEvents=1" 
+        nonce="AFAFdtvB"></script>
     <script
             src="http://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="

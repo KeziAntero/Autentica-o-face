@@ -25,9 +25,9 @@
 		</div>
 		<div class="col-md-9">
 		
-			Olá <?php echo $_SESSION["name"]; ?>!<br>
-			
+			Olá <?php echo $_SESSION["first_name"]; ?>!<br>
 		</div>
+	
 	</div>
 </div>
 </body>

@@ -1,4 +1,4 @@
-var person = { userID: "", name: "", accessToken: "", picture: "", email: ""};
+var person = { userID: "", first_name: "", accessToken: "", picture: "", email: ""};
 
 function logIn() {
     FB.login(function (response) {
@@ -6,8 +6,8 @@ function logIn() {
             person.userID = response.authResponse.userID;
             person.accessToken = response.authResponse.accessToken;
 
-            FB.api('/me?fields=id,name,email,picture.type(large)', function (userData) {
-                person.name = userData.name;
+            FB.api('/me?fields=id,first_name,email,picture.type(large)', function (userData) {
+                person.first_name = userData.first_name;
                 person.email = userData.email;
                 person.picture = userData.picture.data.url;
 
@@ -37,10 +37,9 @@ window.fbAsyncInit = function() {
 };
 
 (function(d, s, id){
-    var js, fjs = d.getElementsByTagName(s)[0];
+    var js, fjs = d.getElementsByTagfirst_name(s)[0];
     if (d.getElementById(id)) {return;}
     js = d.createElement(s); js.id = id;
     js.src = "https://connect.facebook.net/en_US/sdk.js";
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
